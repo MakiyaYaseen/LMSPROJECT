@@ -29,8 +29,7 @@ import ViewLectures from './pages/ViewLectures';
 import MyEnrolledCourses from './pages/MyEnrolledCourses';
 import useGetAllReviews from './customHooks/getAllReviews';
 import SearchWIthAi from './pages/SearchWIthAi';
-export const serverUrl = "http://localhost:8000";
-
+export const serverUrl = import.meta.env.VITE_API_URL || "http://localhost:8000";
 const App = () => {
   useGetCurrentUser();
   useGetCreatorCourse();
